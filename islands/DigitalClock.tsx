@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import { tw } from "twind";
 
 const formatDate = (date: Date, format: string): string => {
   return format
@@ -21,7 +22,11 @@ export default function DigitalClock() {
   }, []);
 
   return (
-    <div class="w-screen flex justify-center text-9xl text-white font-mono gap-20 flex-wrap">
+    <div
+      class={tw(
+        "flex justify-center text-9xl text-white font-mono gap-20 flex-wrap",
+      )}
+    >
       <span>
         {formatDate(date, "yyyy-MM-dd")}
       </span>
