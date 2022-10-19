@@ -18,7 +18,7 @@ export default function DigitalClock() {
   useEffect(() => {
     setInterval(() => {
       setDate(new Date());
-    }, 1);
+    }, 1000);
   }, []);
 
   return (
@@ -31,7 +31,7 @@ export default function DigitalClock() {
         {formatDate(date, "yyyy-MM-dd")}
       </div>
       <div>
-        {formatDate(date, "HH:mm:ss.SSS")}
+        {formatDate(date, "HH:mm:ss")}
       </div>
     </div>
   );
