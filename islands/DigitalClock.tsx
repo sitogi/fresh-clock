@@ -18,21 +18,21 @@ export default function DigitalClock() {
   useEffect(() => {
     setInterval(() => {
       setDate(new Date());
-    }, 1000);
+    }, 1);
   }, []);
 
   return (
     <div
       class={tw(
-        "flex justify-center text-9xl text-white font-mono gap-20 flex-wrap",
+        "grid place-content-center gap-8 text-4xl sm:text-6xl md:text-8xl 2xl:text-9xl text-white font-mono",
       )}
     >
-      <span>
+      <div class={tw("mx-auto")}>
         {formatDate(date, "yyyy-MM-dd")}
-      </span>
-      <span>
-        {formatDate(date, "HH:mm:ss")}
-      </span>
+      </div>
+      <div>
+        {formatDate(date, "HH:mm:ss.SSS")}
+      </div>
     </div>
   );
 }
