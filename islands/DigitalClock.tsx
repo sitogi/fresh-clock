@@ -30,7 +30,7 @@ export default function DigitalClock() {
       <div class={tw("mx-auto")}>
         {formatDate(date, "yyyy-MM-dd")}
       </div>
-      <div>
+      <div class={tw("mx-auto")}>
         {formatDate(date, "HH:mm:ss")}
       </div>
     </div>
